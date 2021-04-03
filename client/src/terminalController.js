@@ -22,7 +22,6 @@ export default class TerminalController{
 
     #onInputReceived(eventEmitter){
 
-
         return function(){
 
             const message = this.getValue()
@@ -41,6 +40,7 @@ export default class TerminalController{
             
             const color = this.#getUserCollor(username)
             chat.addItem(`{${color}}{bold}${username}{/}: ${message}`)
+            
             screen.render()
 
         }
